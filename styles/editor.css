@@ -4,14 +4,7 @@
 }
 
 .active-file-content{
-    font-family: 'Courier New', Courier, monospace;
     height: 90%;
-    /* padding: 40px; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
 }
 
 .aboutContent{

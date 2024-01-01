@@ -1,40 +1,39 @@
-.projectsSidebar{
-    /* font-family: 'Jet Brains Mono', monospace; */
+#sidebar-projects .projectsSidebar {
+    font-family: 'SF Pro Display', sans-serif;
     display: flex;
     flex-direction: column;
+    /* height: 95vh; */
+    overflow: scroll;
 }
 
-.project{
+#sidebar-projects .projectsSidebar .project{
     font-size: smaller;
-    background: var(--sidebar-bg);
-    border-radius: 20px;
+    background: rgb(20, 57, 91);
+    border-radius: 0;
     padding: 10px;
-    /* margin-right: 10px; */
     display: flex;
-    width: auto;
-    height: 0px;
-    flex-direction: column;
-    position: relative;
-    overflow:hidden;
-      text-overflow: ellipsis;
+    padding: 10px;
+    min-width: 10px;
+    max-width: 100%;
+    white-space: nowrap;
+    min-height: 12px;
+    overflow: hidden;
+    padding-left: 8px;
+    margin: 0;
 }
 
-.project h2{ 
-    text-align: center;
-    font-size: 10px;
+#sidebar-projects .projectsSidebar .project h2{ 
+    text-align: left;
+    font-size: 12px;
 }
 
-.project p{
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    text-align: justify;
-    padding: 5px;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+#sidebar-projects .projectsSidebar .project p{
+      display: block;
+      padding: 0;
+      margin: 0;
 }
 
-.word-tag {
+#sidebar-projects .word-tag {
     display: inline-block;
     margin: 5px;
     padding: 5px;

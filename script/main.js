@@ -22,6 +22,7 @@ function openFileContent(file) {
     const activities = ['file', 'projects'];
     for (let i = 0; i < activities.length; i++) {
       const content = $(`#${activities[i]}Explorer`);
+    //   const content = $(`.sidebar-projects`);
       const choosenActivity = $(`.activity-bar .a-bar-icon-container:nth-child(${i + 1})`);
       console.log(choosenActivity)
       if (activities[i] === activity) {
@@ -63,7 +64,11 @@ function openFileContent(file) {
   });
 
   window.addEventListener('DOMContentLoaded', function() {
-    const textContainer = document.getElementsByClassName('tagged-text')[0];
+      const textContainer = document.getElementsByClassName('tagged-text');
+    // Array.from(textContainer).forEach(function(textContainer) {
+      //   const words = (textContainer.textContent ?? '').split(/\s|,/);
+    
+    // })
     console.log(textContainer)
     if (textContainer) {
       const words = (textContainer.textContent ?? '').split(/\s|,/);

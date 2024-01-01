@@ -1,147 +1,231 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>VS Code Portfolio</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/sidebar.css">
-  <link rel="stylesheet" href="styles/explorer.css">
-  <link rel="stylesheet" href="styles/taskbar.css">
-  <link rel="stylesheet" href="styles/editor.css">
-  <link rel="stylesheet" href="styles/project-file-content.css">
-  <link rel="stylesheet" href="styles/project-sidebar.css">
-</head>
-<body>
-  <div class="container">
-    <div class="sidebar">
-      <div class="row">
-        <div class="col-2 a-bar-main">
-            <div class="activity-bar m-0">
-                <div>
-                    <div onclick="openActivity('file')" class="a-bar-icon-container active">
-                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="rgb(106, 115, 125)" class="a-bar-icon"><path d="M17.5 0h-9L7 1.5V6H2.5L1 7.5v15.07L2.5 24h12.07L16 22.57V18h4.7l1.3-1.43V4.5L17.5 0zm0 2.12l2.38 2.38H17.5V2.12zm-3 20.38h-12v-15H7v9.07L8.5 18h6v4.5zm6-6h-12v-15H16V6h4.5v10.5z"></path></svg>
+    <head>
+        <title>VS Code Portfolio</title>
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/sidebar.css">
+        <link rel="stylesheet" href="styles/explorer.css">
+        <link rel="stylesheet" href="styles/taskbar.css">
+        <link rel="stylesheet" href="styles/editor.css">
+        <link rel="stylesheet" href="styles/project-file-content.css">
+        <link rel="stylesheet" href="styles/project-sidebar.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="sidebar">
+                <div class="row">
+                    <div class="col-2 a-bar-main">
+                        <div class="activity-bar m-0">
+                            <div>
+                                <div onclick="openActivity('file')"
+                                    class="a-bar-icon-container active">
+                                    <svg width="24" height="24"
+                                        viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="rgb(106, 115, 125)"
+                                        class="a-bar-icon"><path
+                                            d="M17.5 0h-9L7 1.5V6H2.5L1 7.5v15.07L2.5 24h12.07L16 22.57V18h4.7l1.3-1.43V4.5L17.5 0zm0 2.12l2.38 2.38H17.5V2.12zm-3 20.38h-12v-15H7v9.07L8.5 18h6v4.5zm6-6h-12v-15H16V6h4.5v10.5z"></path></svg>
+                                </div>
+                                <div onclick="openActivity('projects')"
+                                    class="a-bar-icon-container">
+                                    <svg width="24" height="24"
+                                        viewBox="0 0 16 16"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="rgb(106, 115, 125)"
+                                        class="a-bar-icon"><path
+                                            d="M4.708 5.578L2.061 8.224l2.647 2.646-.708.708-3-3V7.87l3-3 .708.708zm7-.708L11 5.578l2.647 2.646L11 10.87l.708.708 3-3V7.87l-3-3zM4.908 13l.894.448 5-10L9.908 3l-5 10z"></path></svg>
+                                </div>
+                                <div class="a-bar-icon-container">
+                                    <svg width="24" height="24"
+                                        viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="rgb(106, 115, 125)"
+                                        class="a-bar-icon"><path
+                                            d="M8 19h-3v-10h3v10zm11 0h-3v-5.342c0-1.392-.496-2.085-1.479-2.085-.779 0-1.273.388-1.521 1.165v6.262h-3s.04-9 0-10h2.368l.183 2h.062c.615-1 1.598-1.678 2.946-1.678 1.025 0 1.854.285 2.487 1.001.637.717.954 1.679.954 3.03v5.647z" /><ellipse
+                                            cx="6.5" cy="6.5" rx="1.55"
+                                            ry="1.5" /></svg>
+                                </div>
+                                <div class="a-bar-icon-container">
+                                    <svg width="24" height="24"
+                                        viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="rgb(106, 115, 125)"
+                                        class="a-bar-icon"><path
+                                            d="M21.007 8.222A3.738 3.738 0 0 0 15.045 5.2a3.737 3.737 0 0 0 1.156 6.583 2.988 2.988 0 0 1-2.668 1.67h-2.99a4.456 4.456 0 0 0-2.989 1.165V7.4a3.737 3.737 0 1 0-1.494 0v9.117a3.776 3.776 0 1 0 1.816.099 2.99 2.99 0 0 1 2.668-1.667h2.99a4.484 4.484 0 0 0 4.223-3.039 3.736 3.736 0 0 0 3.25-3.687zM4.565 3.738a2.242 2.242 0 1 1 4.484 0 2.242 2.242 0 0 1-4.484 0zm4.484 16.441a2.242 2.242 0 1 1-4.484 0 2.242 2.242 0 0 1 4.484 0zm8.221-9.715a2.242 2.242 0 1 1 0-4.485 2.242 2.242 0 0 1 0 4.485z" /></svg>
+                                </div>
+                                <div class="a-bar-icon-container">
+                                    <svg width="24" height="24"
+                                        viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="rgb(106, 115, 125)"
+                                        class="a-bar-icon"><path
+                                            d="M9,15 L9,23 L1,23 L1,15 L9,15 Z M23,15 L23,23 L15,23 L15,15 L23,15 Z M9,1 L9,9 L1,9 L1,1 L9,1 Z M23,1 L23,9 L15,9 L15,1 L23,1 Z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="a-bar-container">
+                                    <svg width="24" height="24"
+                                        viewBox="0 0 16 16"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="rgb(106, 115, 125)"
+                                        class="a-bar-icon"><path
+                                            d="M16 7.992C16 3.58 12.416 0 8 0S0 3.58 0 7.992c0 2.43 1.104 4.62 2.832 6.09.016.016.032.016.032.032.144.112.288.224.448.336.08.048.144.111.224.175A7.98 7.98 0 008.016 16a7.98 7.98 0 004.48-1.375c.08-.048.144-.111.224-.16.144-.111.304-.223.448-.335.016-.016.032-.016.032-.032 1.696-1.487 2.8-3.676 2.8-6.106zm-8 7.001c-1.504 0-2.88-.48-4.016-1.279.016-.128.048-.255.08-.383a4.17 4.17 0 01.416-.991c.176-.304.384-.576.64-.816.24-.24.528-.463.816-.639.304-.176.624-.304.976-.4A4.15 4.15 0 018 10.342a4.185 4.185 0 012.928 1.166c.368.368.656.8.864 1.295.112.288.192.592.24.911A7.03 7.03 0 018 14.993zm-2.448-7.4a2.49 2.49 0 01-.208-1.024c0-.351.064-.703.208-1.023.144-.32.336-.607.576-.847.24-.24.528-.431.848-.575.32-.144.672-.208 1.024-.208.368 0 .704.064 1.024.208.32.144.608.336.848.575.24.24.432.528.576.847.144.32.208.672.208 1.023 0 .368-.064.704-.208 1.023a2.84 2.84 0 01-.576.848 2.84 2.84 0 01-.848.575 2.715 2.715 0 01-2.064 0 2.84 2.84 0 01-.848-.575 2.526 2.526 0 01-.56-.848zm7.424 5.306c0-.032-.016-.048-.016-.08a5.22 5.22 0 00-.688-1.406 4.883 4.883 0 00-1.088-1.135 5.207 5.207 0 00-1.04-.608 2.82 2.82 0 00.464-.383 4.2 4.2 0 00.624-.784 3.624 3.624 0 00.528-1.934 3.71 3.71 0 00-.288-1.47 3.799 3.799 0 00-.816-1.199 3.845 3.845 0 00-1.2-.8 3.72 3.72 0 00-1.472-.287 3.72 3.72 0 00-1.472.288 3.631 3.631 0 00-1.2.815 3.84 3.84 0 00-.8 1.199 3.71 3.71 0 00-.288 1.47c0 .352.048.688.144 1.007.096.336.224.64.4.927.16.288.384.544.624.784.144.144.304.271.48.383a5.12 5.12 0 00-1.04.624c-.416.32-.784.703-1.088 1.119a4.999 4.999 0 00-.688 1.406c-.016.032-.016.064-.016.08C1.776 11.636.992 9.91.992 7.992.992 4.14 4.144.991 8 .991s7.008 3.149 7.008 7.001a6.96 6.96 0 01-2.032 4.907z"></path></svg>
+                                </div>
+                                <div class="a-bar-container">
+                                    <svg width="24" height="24"
+                                        viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="rgb(106, 115, 125)"
+                                        class="a-bar-icon"><path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M19.85 8.75l4.15.83v4.84l-4.15.83 2.35 3.52-3.43 3.43-3.52-2.35-.83 4.15H9.58l-.83-4.15-3.52 2.35-3.43-3.43 2.35-3.52L0 14.42V9.58l4.15-.83L1.8 5.23 5.23 1.8l3.52 2.35L9.58 0h4.84l.83 4.15 3.52-2.35 3.43 3.43-2.35 3.52zm-1.57 5.07l4-.81v-2l-4-.81-.54-1.3 2.29-3.43-1.43-1.43-3.43 2.29-1.3-.54-.81-4h-2l-.81 4-1.3.54-3.43-2.29-1.43 1.43L6.38 8.9l-.54 1.3-4 .81v2l4 .81.54 1.3-2.29 3.43 1.43 1.43 3.43-2.29 1.3.54.81 4h2l.81-4 1.3-.54 3.43 2.29 1.43-1.43-2.29-3.43.54-1.3zm-8.186-4.672A3.43 3.43 0 0112 8.57 3.44 3.44 0 0115.43 12a3.43 3.43 0 11-5.336-2.852zm.956 4.274c.281.188.612.288.95.288A1.7 1.7 0 0013.71 12a1.71 1.71 0 10-2.66 1.422z"></path></svg>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div onclick="openActivity('projects')" class="a-bar-icon-container">
-                        <svg width="24" height="24" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"  fill="rgb(106, 115, 125)" class="a-bar-icon"><path d="M4.708 5.578L2.061 8.224l2.647 2.646-.708.708-3-3V7.87l3-3 .708.708zm7-.708L11 5.578l2.647 2.646L11 10.87l.708.708 3-3V7.87l-3-3zM4.908 13l.894.448 5-10L9.908 3l-5 10z"></path></svg>
+                    <div class="col-10">
+                        <div class="explorer" id="fileExplorer">
+                            <div class="explorer-title p-2">
+                                <!-- <input type="checkbox"> -->
+                                <p>EXPLORER</p>
+                                <p>...</p>
+                            </div>
+                            <div>
+                                <label class="project-dir"><svg width="16"
+                                        height="16" viewBox="0 0 16 16"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="currentColor"
+                                        class="Explorer_chevron__PFE0_"
+                                        style="transform:rotate(90deg)"><path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M10.072 8.024L5.715 3.667l.618-.62L11 7.716v.618L6.333 13l-.618-.619 4.357-4.357z"></path></svg>portfolio-content</label>
+                            </div>
+                            <div class="explorer-files">
+                                <ul>
+                                    <li onclick="openFileContent('home')"
+                                        class="explorer-file active-file"><i
+                                            class="fab fa-js"></i>Home.js</li>
+                                    <li onclick="openFileContent('about')"
+                                        class="explorer-file"><i
+                                            class="fab fa-laravel"></i>About.blade.php</li>
+                                    <li onclick="openFileContent('projects')"
+                                        class="explorer-file"><i
+                                            class="fab fa-python"></i>Projects.py</li>
+                                    <li onclick="openFileContent('contact')"
+                                        class="explorer-file"><i
+                                            class="fab fa-html5"></i>Contact.html</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="explorer d-none" id="projectsExplorer">
+                            <div class="explorer-title p-2">
+                                <!-- <input type="checkbox"> -->
+                                <div>
+                                    <p>Projects</p>
+                                </div>
+                                <div class="d-flex ">
+                                    <i class="fab fa-code"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="project-dir"><svg width="16"
+                                        height="16" viewBox="0 0 16 16"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="currentColor"
+                                        class="Explorer_chevron__PFE0_"
+                                        style="transform:rotate(90deg)"><path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M10.072 8.024L5.715 3.667l.618-.62L11 7.716v.618L6.333 13l-.618-.619 4.357-4.357z"></path></svg>portfolio-content</label>
+                            </div>
+                            <div class="sidebar-projects" id="sidebar-projects">
+                                <div class="projectsSidebar projectsContent">
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="a-bar-icon-container">
-                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="rgb(106, 115, 125)" class="a-bar-icon"><path d="M8 19h-3v-10h3v10zm11 0h-3v-5.342c0-1.392-.496-2.085-1.479-2.085-.779 0-1.273.388-1.521 1.165v6.262h-3s.04-9 0-10h2.368l.183 2h.062c.615-1 1.598-1.678 2.946-1.678 1.025 0 1.854.285 2.487 1.001.637.717.954 1.679.954 3.03v5.647z"/><ellipse cx="6.5" cy="6.5" rx="1.55" ry="1.5"/></svg>
-                    </div>
-                    <div class="a-bar-icon-container">
-                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="rgb(106, 115, 125)" class="a-bar-icon"><path d="M21.007 8.222A3.738 3.738 0 0 0 15.045 5.2a3.737 3.737 0 0 0 1.156 6.583 2.988 2.988 0 0 1-2.668 1.67h-2.99a4.456 4.456 0 0 0-2.989 1.165V7.4a3.737 3.737 0 1 0-1.494 0v9.117a3.776 3.776 0 1 0 1.816.099 2.99 2.99 0 0 1 2.668-1.667h2.99a4.484 4.484 0 0 0 4.223-3.039 3.736 3.736 0 0 0 3.25-3.687zM4.565 3.738a2.242 2.242 0 1 1 4.484 0 2.242 2.242 0 0 1-4.484 0zm4.484 16.441a2.242 2.242 0 1 1-4.484 0 2.242 2.242 0 0 1 4.484 0zm8.221-9.715a2.242 2.242 0 1 1 0-4.485 2.242 2.242 0 0 1 0 4.485z"/></svg>
-                    </div>
-                    <div class="a-bar-icon-container">
-                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="rgb(106, 115, 125)" class="a-bar-icon"><path d="M9,15 L9,23 L1,23 L1,15 L9,15 Z M23,15 L23,23 L15,23 L15,15 L23,15 Z M9,1 L9,9 L1,9 L1,1 L9,1 Z M23,1 L23,9 L15,9 L15,1 L23,1 Z"/> </svg>
-                    </div>
-                </div>
-                <div>
-                    <div class="a-bar-container">
-                        <svg width="24" height="24" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="rgb(106, 115, 125)" class="a-bar-icon"><path d="M16 7.992C16 3.58 12.416 0 8 0S0 3.58 0 7.992c0 2.43 1.104 4.62 2.832 6.09.016.016.032.016.032.032.144.112.288.224.448.336.08.048.144.111.224.175A7.98 7.98 0 008.016 16a7.98 7.98 0 004.48-1.375c.08-.048.144-.111.224-.16.144-.111.304-.223.448-.335.016-.016.032-.016.032-.032 1.696-1.487 2.8-3.676 2.8-6.106zm-8 7.001c-1.504 0-2.88-.48-4.016-1.279.016-.128.048-.255.08-.383a4.17 4.17 0 01.416-.991c.176-.304.384-.576.64-.816.24-.24.528-.463.816-.639.304-.176.624-.304.976-.4A4.15 4.15 0 018 10.342a4.185 4.185 0 012.928 1.166c.368.368.656.8.864 1.295.112.288.192.592.24.911A7.03 7.03 0 018 14.993zm-2.448-7.4a2.49 2.49 0 01-.208-1.024c0-.351.064-.703.208-1.023.144-.32.336-.607.576-.847.24-.24.528-.431.848-.575.32-.144.672-.208 1.024-.208.368 0 .704.064 1.024.208.32.144.608.336.848.575.24.24.432.528.576.847.144.32.208.672.208 1.023 0 .368-.064.704-.208 1.023a2.84 2.84 0 01-.576.848 2.84 2.84 0 01-.848.575 2.715 2.715 0 01-2.064 0 2.84 2.84 0 01-.848-.575 2.526 2.526 0 01-.56-.848zm7.424 5.306c0-.032-.016-.048-.016-.08a5.22 5.22 0 00-.688-1.406 4.883 4.883 0 00-1.088-1.135 5.207 5.207 0 00-1.04-.608 2.82 2.82 0 00.464-.383 4.2 4.2 0 00.624-.784 3.624 3.624 0 00.528-1.934 3.71 3.71 0 00-.288-1.47 3.799 3.799 0 00-.816-1.199 3.845 3.845 0 00-1.2-.8 3.72 3.72 0 00-1.472-.287 3.72 3.72 0 00-1.472.288 3.631 3.631 0 00-1.2.815 3.84 3.84 0 00-.8 1.199 3.71 3.71 0 00-.288 1.47c0 .352.048.688.144 1.007.096.336.224.64.4.927.16.288.384.544.624.784.144.144.304.271.48.383a5.12 5.12 0 00-1.04.624c-.416.32-.784.703-1.088 1.119a4.999 4.999 0 00-.688 1.406c-.016.032-.016.064-.016.08C1.776 11.636.992 9.91.992 7.992.992 4.14 4.144.991 8 .991s7.008 3.149 7.008 7.001a6.96 6.96 0 01-2.032 4.907z"></path></svg>
-                    </div>
-                    <div class="a-bar-container">
-                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="rgb(106, 115, 125)" class="a-bar-icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M19.85 8.75l4.15.83v4.84l-4.15.83 2.35 3.52-3.43 3.43-3.52-2.35-.83 4.15H9.58l-.83-4.15-3.52 2.35-3.43-3.43 2.35-3.52L0 14.42V9.58l4.15-.83L1.8 5.23 5.23 1.8l3.52 2.35L9.58 0h4.84l.83 4.15 3.52-2.35 3.43 3.43-2.35 3.52zm-1.57 5.07l4-.81v-2l-4-.81-.54-1.3 2.29-3.43-1.43-1.43-3.43 2.29-1.3-.54-.81-4h-2l-.81 4-1.3.54-3.43-2.29-1.43 1.43L6.38 8.9l-.54 1.3-4 .81v2l4 .81.54 1.3-2.29 3.43 1.43 1.43 3.43-2.29 1.3.54.81 4h2l.81-4 1.3-.54 3.43 2.29 1.43-1.43-2.29-3.43.54-1.3zm-8.186-4.672A3.43 3.43 0 0112 8.57 3.44 3.44 0 0115.43 12a3.43 3.43 0 11-5.336-2.852zm.956 4.274c.281.188.612.288.95.288A1.7 1.7 0 0013.71 12a1.71 1.71 0 10-2.66 1.422z"></path></svg>
-                    </div>
+                    <!-- <div class="col-1"></div> -->
                 </div>
             </div>
-        </div>
-        <div class="col-10">
-            <div class="explorer" id="fileExplorer">
-                <div class="explorer-title p-2">
-                    <!-- <input type="checkbox"> -->
-                    <p>EXPLORER</p>
-                    <p>...</p>
-                </div>
-                <div>
-                    <label class="project-dir"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="Explorer_chevron__PFE0_" style="transform:rotate(90deg)"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.072 8.024L5.715 3.667l.618-.62L11 7.716v.618L6.333 13l-.618-.619 4.357-4.357z"></path></svg>portfolio-content</label>
-                </div>
-                <div class="explorer-files">
+            <div class="content">
+                <div class="taskbar">
                     <ul>
-                        <li onclick="openFileContent('home')" class="explorer-file active-file"><i class="fab fa-js"></i>Home.js</li>
-                        <li onclick="openFileContent('about')" class="explorer-file"><i class="fab fa-laravel"></i>About.blade.php</li>
-                        <li onclick="openFileContent('projects')" class="explorer-file"><i class="fab fa-python"></i>Projects.py</li>
-                        <li onclick="openFileContent('contact')" class="explorer-file"><i class="fab fa-html5"></i>Contact.html</li>
+                        <li onclick="openFileContent('home')"
+                            class="taskbar-tab taskbar-tab-active"><i
+                                class="fab fa-js"></i>Home.js</li>
+                        <li onclick="openFileContent('about')"
+                            class="taskbar-tab "><i
+                                class="fab fa-laravel"></i>About.blade.php</li>
+                        <li onclick="openFileContent('projects')"
+                            class="taskbar-tab "><i
+                                class="fab fa-python"></i>Projects.py</li>
+                        <li onclick="openFileContent('contact')"
+                            class="taskbar-tab "><i
+                                class="fab fa-html5"></i>Contact.html</li>
                     </ul>
                 </div>
-            </div>
+                <div class="main-editor">
+                    <div class="active-file-content homeContent">
+                        <div class="intro">
+                            <h2>Massab Khan</h2>
+                            <p>Backed / DevOps Engineer</p>
+                            <div class="intro-links">
+                                <a onclick="openFileContent('about')"
+                                    href="#">About</a> -
+                                <a href="#">Contact</a>
+                            </div>
+                        </div>
+                        <div class="vs-code-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px"
+                                y="0px" width="300" height="300"
+                                viewBox="0 0 48 48">
+                                <path fill="rgb(22, 22, 22)"
+                                    d="M44,11.11v25.78c0,1.27-0.79,2.4-1.98,2.82l-8.82,4.14L34,33V15L33.2,4.15l8.82,4.14 C43.21,8.71,44,9.84,44,11.11z"></path><path
+                                    fill="rgb(22, 22, 22)"
+                                    d="M9,33.896L34,15V5.353c0-1.198-1.482-1.758-2.275-0.86L4.658,29.239 c-0.9,0.83-0.849,2.267,0.107,3.032c0,0,1.324,1.232,1.803,1.574C7.304,34.37,8.271,34.43,9,33.896z"></path><path
+                                    fill="rgb(22, 22, 22)"
+                                    d="M9,14.104L34,33v9.647c0,1.198-1.482,1.758-2.275,0.86L4.658,18.761 c-0.9-0.83-0.849-2.267,0.107-3.032c0,0,1.324-1.232,1.803-1.574C7.304,13.63,8.271,13.57,9,14.104z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="active-file-content aboutContent hidden">
+                        <h2>About Me</h2>
+                        <p><b>Massab (formal. Muhammad Massab Rasheed)</b>,
+                            born
+                            in
+                            1999 is a backend / devops engineer.
+                            Graduated from Ghazi University Dera Ghazi Khan
+                            Completed his <b>Master of Computer Science</b>
+                            in
+                            2022.
+                            <br> <br>
+                            He Has gained over 5 years of experience in the
+                            industry using stacks like <b>Laravel,
+                                NodeJS/Express,
+                                AWS, etc.. </b> Has worked in various
+                            projects
+                            using
+                            different technologies. <br> <br>
+                            Currently working at <b>DevStudio</b>, Lahore,
+                            Pakistan.
+                        </p>
+                    </div>
+                    <div class="active-file-content projectsContent hidden">
 
-            <div class="explorer hidden" id="projectsExplorer">
-                <div class="explorer-title p-2">
-                    <!-- <input type="checkbox"> -->
-                    <div>
-                        <p>Projects</p>
-                    </div>
-                    <div class="d-flex ">
-                        <i class="fab fa-code"></i>
-                    </div>
-                </div>
-                <div>
-                    <label class="project-dir"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="Explorer_chevron__PFE0_" style="transform:rotate(90deg)"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.072 8.024L5.715 3.667l.618-.62L11 7.716v.618L6.333 13l-.618-.619 4.357-4.357z"></path></svg>portfolio-content</label>
-                </div>
-                <div class="sidebar-projects">
-                    <div class="projectsSidebar">
-                        
                     </div>
                 </div>
             </div>
         </div>
-        <!-- <div class="col-1"></div> -->
-      </div>
-    </div>
-    <div class="content">
-        <div class="taskbar">
-            <ul>
-                <li onclick="openFileContent('home')" class="taskbar-tab taskbar-tab-active"><i class="fab fa-js"></i>Home.js</li>
-                <li onclick="openFileContent('about')" class="taskbar-tab "><i class="fab fa-laravel"></i>About.blade.php</li>
-                <li onclick="openFileContent('projects')" class="taskbar-tab "><i class="fab fa-python"></i>Projects.py</li>
-                <li onclick="openFileContent('contact')" class="taskbar-tab "><i class="fab fa-html5"></i>Contact.html</li>
-            </ul>
-        </div>
-        <div class="main-editor">
-            <div class="active-file-content homeContent">
-                <div class="intro">
-                    <h2>Massab Khan</h2>
-                    <p>Backed / DevOps Engineer</p>
-                    <div class="intro-links">
-                        <a onclick="openFileContent('about')" href="#">About</a> -
-                        <a href="#">Contact</a>
-                    </div>
-                </div>
-                <div class="vs-code-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="300" height="300" viewBox="0 0 48 48">
-                        <path fill="rgb(22, 22, 22)" d="M44,11.11v25.78c0,1.27-0.79,2.4-1.98,2.82l-8.82,4.14L34,33V15L33.2,4.15l8.82,4.14 C43.21,8.71,44,9.84,44,11.11z"></path><path fill="rgb(22, 22, 22)" d="M9,33.896L34,15V5.353c0-1.198-1.482-1.758-2.275-0.86L4.658,29.239 c-0.9,0.83-0.849,2.267,0.107,3.032c0,0,1.324,1.232,1.803,1.574C7.304,34.37,8.271,34.43,9,33.896z"></path><path fill="rgb(22, 22, 22)" d="M9,14.104L34,33v9.647c0,1.198-1.482,1.758-2.275,0.86L4.658,18.761 c-0.9-0.83-0.849-2.267,0.107-3.032c0,0,1.324-1.232,1.803-1.574C7.304,13.63,8.271,13.57,9,14.104z"></path>
-                    </svg>
-                </div>
-            </div>
-            <div class="active-file-content aboutContent hidden">
-                <h2>About Me</h2>
-                <p><b>Massab (formal. Muhammad Massab Rasheed)</b>,
-                    born
-                    in
-                    1999 is a backend / devops engineer.
-                    Graduated from Ghazi University Dera Ghazi Khan
-                    Completed his <b>Master of Computer Science</b>
-                    in
-                    2022.
-                    <br> <br>
-                    He Has gained over 5 years of experience in the
-                    industry using stacks like <b>Laravel,
-                        NodeJS/Express,
-                        AWS, etc.. </b> Has worked in various
-                    projects
-                    using
-                    different technologies. <br> <br>
-                    Currently working at <b>DevStudio</b>, Lahore,
-                    Pakistan.
-                </p>
-            </div>
-            <div class="active-file-content projectsContent hidden">
-
-            </div>
-        </div>
-    </div>
-  </div>
-  <script src="script/main.js"></script>
-</body>
+        <script src="script/main.js"></script>
+    </body>
 </html>

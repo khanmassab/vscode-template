@@ -1,40 +1,39 @@
 .projectsContent{
-    /* font-family: 'Jet Brains Mono', monospace; */
-    display: flex;
-    flex-direction: column;
+    overflow: scroll;
+    font-family: 'Jet Brains Mono', monospace;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
 }
 
-.project{
-    font-size: smaller;
+.projectsContent .project{
     background: var(--sidebar-bg);
     border-radius: 20px;
     padding: 10px;
-    /* margin-right: 10px; */
+    min-width: 600px;
+    min-height: 400px;
     display: flex;
-    width: auto;
-    height: 0px;
     flex-direction: column;
     position: relative;
-    overflow:hidden;
-      text-overflow: ellipsis;
+    overflow: scroll;
+    margin: 10px;
 }
 
-.project h2{ 
+.projectsContent .project h2{ 
     text-align: center;
-    font-size: 10px;
+    /* font-size: 10px; */
 }
 
-.project p{
+.projectsContent .project p{
+    color: rgb(191, 191, 191);
     display: flex;
     justify-content: center;
     text-decoration: none;
     text-align: justify;
     padding: 5px;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+
 }
 
-.word-tag {
+.projectsContent .word-tag {
     display: inline-block;
     margin: 5px;
     padding: 5px;
