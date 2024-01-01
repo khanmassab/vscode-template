@@ -1,0 +1,39 @@
+.taskbar{
+    background: var(--sidebar-bg);
+}
+.taskbar ul{
+    display: flex;
+    margin-left: 0px;
+    margin: 0;
+    padding: 0;
+    background: var(--tabs-bg);
+    overflow-x: auto;
+}
+
+.taskbar ul li{
+    text-transform: lowercase;
+    list-style: none;
+    /* margin-right: 2px; */
+}
+
+.taskbar-tab{
+    padding: 0.5rem 1.25rem;
+    background: var(--tab-bg);
+    color: rgb(191, 191, 191);
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--tab-border);
+    font-family: Source Sans Pro,sans-serif;
+    font-size: .9rem;
+    cursor: pointer;
+}
+
+.taskbar-tab-active{
+    border-top: var(--active-bar-border);
+    background: var(--content-bg);
+    color: #fff;
+}
+
+.taskbar-tab i{
+    margin-right: 3px;
+}

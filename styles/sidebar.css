@@ -1,0 +1,31 @@
+
+.activity-bar{
+    background: var(--sidebar-bg);
+    border-right: rgb(43, 43, 43) 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 50px;
+    /* height: calc(100vh - 30px - 25px); */
+    height: calc(100vh);
+}
+
+.a-bar-icon {
+    height: 48px;
+    width: 48px;
+    padding: 0.65rem 0;
+    display: block;
+    margin: 0 auto;
+}
+
+.active{
+    border-left: rgb(85, 144, 214) 3px solid;
+}
+
+.active svg{
+    fill: #fff;
+}
+
+.a-bar-icon:hover{
+    fill: #fff;
+}

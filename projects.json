@@ -1,0 +1,22 @@
+{
+    "projects": [
+        {
+        "title": "ChefApp",
+        "description": "In a world where food delivery dominates, LiveChef introduces a game-changing twist to your dining experience. Say goodbye to simply receiving meals and hello to becoming the master of your own kitchen! Users having a one-on-one video consultation with a chef who guides them through preparing incredible meals. With LiveChef, you call the shots in your kitchen and craft dishes that delight your taste buds.",
+        "toolsAndTechnologies": "Worked solely on the whole project as a Backend Engineer using PHP-Laravel, Blade, Firebase, MySql, OpenTok, Stripe, CSS, AWS(EC2, RDS, S3, Route53), Webhook Services.",
+        "link": ["https://play.google.com/store/apps/details?id=com.mzbyte.livechef", "https://apps.apple.com/us/app/livechef/id6451316647"]
+        },
+        {
+        "title": "Click Learning",
+        "description": "Click Learning Company (CLC) is an optional, online service that gives families access to a personal Educator if they need extra support for their Learner in reading, writing, math, etc. If families opt in, their Learner is matched with a background checked & certified Educator who will meet with the family to understand their needs, interests, and prepare a specialized learning plan towards achieving their learning objectives.",
+        "toolsAndTechnologies": "Laravel, NodeJS, Express, Socket IO, VueJS, Bootstrap, Stripe, Telescope, Sanctum and more",
+        "link": ["https://clickfront.io-devs.us/"]
+        },
+        {
+        "title": "ACE Money Transfer",
+        "description": "ACE Money Transfer provides remittance services to 100+ receiving countries. Having offices in UK, Europe, Australia, Pakistan, and Bangladesh. It is build a network of over 350,000 Payout locations and 1.3 million customers worldwide. It is in the fabric of our company, to overcome the odds, innovate and thrive.",
+        "toolsAndTechnologies": "Laravel’s Lumen, Ajax, JS, JQuery, Bootstrap, HTML, CSS, Webhooks MySQL, Payment Gateways (GooglePay, ApplePay, Trustly, Tranct365, Ingenico, Checkout,).",
+        "link": ["https://acemoneytransfer.com", "https://play.google.com/store/apps/details?id=com.acemoneytransfer.android&hl=en&gl=US", "https://apps.apple.com/us/app/ace-money-transfer/id1290922727"]
+        }
+    ]
+}

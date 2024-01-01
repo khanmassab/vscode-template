@@ -1,0 +1,86 @@
+:root {
+  --sidebar-bg: rgb(24, 24, 24);
+  --explorer-bg: rgb(25, 25, 25);
+  --active-bar-border:rgb(85, 144, 214) 2px solid;
+  --content-bg: #1e1e1e;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    display: flex;
+    height: 100vh;
+    max-width: 100% !important;
+    padding: 0;
+  }
+
+  .sidebar {
+    width: 18%;
+    background-color: var(--sidebar-bg);
+    color: #fff;
+    /* padding: 20px; */
+  }
+
+  .sidebar h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* .sidebar li {
+    margin-bottom: 10px;
+  } */
+
+  .sidebar a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .content {
+    width: 80%;
+    flex-grow: 1;
+    background-color: var(--content-bg);
+    color: #fff;
+  }
+
+  .content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .content p {
+    margin-bottom: 10px;
+  }
+
+  .content a {
+    color: #6ebaff;
+    text-decoration: none;
+  }
+
+  .fab.fa-js {
+    color: #F7DF1E;
+  }
+
+.fab.fa-laravel {
+    color: #FB503B; 
+  }
+
+.fab.fa-python {
+    color: #3776AB; 
+  }
+
+.fab.fa-html5 {
+    color: #E34F26;
+  }
+
+  .hidden{
+    display: none;
+  }
