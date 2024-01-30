@@ -7,8 +7,8 @@
 }
 
 #sidebar-projects .projectsSidebar .project{
+    position: relative;
     font-size: smaller;
-    background: rgb(20, 57, 91);
     border-radius: 0;
     padding: 10px;
     display: flex;
@@ -19,9 +19,37 @@
     min-height: 12px;
     overflow: hidden;
     padding-left: 8px;
-    margin: 0;
+    margin-bottom: 3px;
+    cursor: pointer;
 }
 
+/* .tooltip {
+    position: absolute;
+    top: 0%;
+    left: 80%;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 4px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+  } */
+
+  
+/* .project .active{
+    background-color: #f1f1f1;
+} */
+
+/* .project:hover, .tooltip {
+    z-index: 9999;
+    flex-flow: row wrap;
+    /* background-color: rgba(0, 0, 0, 0.8); */
+    /* visibility: visible;
+    opacity: 1; */
+  /* } */ 
 #sidebar-projects .projectsSidebar .project h2{ 
     text-align: left;
     font-size: 12px;

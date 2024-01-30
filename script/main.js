@@ -39,13 +39,16 @@ function openFileContent(file) {
 
   $(document).ready(function() {
     $.getJSON('projects.json', function(data) {
-      const projectContainer = $('.projectsContent');      
+      const projectContainer = $('.projectsContent');     
       $.each(data.projects, function(index, project) {
         const projectDiv = $('<div>').addClass('project');
         const projectTitle = $('<h2> <b>').text(project.title);
         const projectDescription = $('<p>').text(project.description);
         const projectTools = $('<p>').addClass('tagged-text').text(project.toolsAndTechnologies);        
         const projectLinks = $('<p>');
+        const content = $('.content');      
+        const tooltip = $('<div>').addClass('tooltip').text(project.description);
+        content.append(tooltip);
   
         $.each(project.link, function(index, link) {
           const linkElement = $('<a target="_blank">').attr('href', link).text(`Link ${index + 1}`);
@@ -84,4 +87,6 @@ function openFileContent(file) {
         // textContainer.append(span);
       });
     }
+
+
   });
